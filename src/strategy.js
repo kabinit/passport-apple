@@ -91,9 +91,7 @@ function Strategy(options, verify) {
                         callback(error);
                     } else {
                         const results = JSON.parse(data);
-                        const access_token = results.access_token;
-                        const refresh_token = results.refresh_token;
-                        callback(null, access_token, refresh_token, results.id_token);
+                        callback(null, results.access_token, results);
                     }
                 }
             )
